@@ -1,4 +1,4 @@
-import React, {useState, useEffect}  from "react";
+import React , {useState, useEffect}  from "react";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
@@ -40,7 +40,7 @@ export default function FilterMoviesCard(props) {
 
   const handleChange = (e, type, value) => {
     e.preventDefault()
-    // Completed later
+    props.onUserInput(type, value)
   };
   const handleTextChange = e => {
     handleChange(e, "name", e.target.value)
